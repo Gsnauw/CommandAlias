@@ -1,0 +1,28 @@
+name: CommandAlias
+version: '1.0.0'
+main: be.gsnauw.commandAlias.CommandAlias
+api-version: '1.21'
+prefix: CommandAlias
+authors: [ Gilles ]
+description: Make command aliases.
+website: Gsnauw.be
+commands:
+  commandalias:
+    description: Reloads the plugin config.
+    usage: /<command>
+
+permissions:
+  commandalias.*:
+    description: Geeft alle plugin permissies in één keer.
+    default: op
+    children:
+      commandalias.use: true
+      commandalias.reload: true
+
+  commandalias.reload:
+    description: Reload de volledige plugin.
+    children:
+      commandalias.use: true
+
+  commandalias.use:
+    description: Gebruik het command
