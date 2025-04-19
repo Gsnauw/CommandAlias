@@ -52,7 +52,7 @@ public class ReloadCommand implements CommandExecutor, TabCompleter {
         plugin.reloadConfig();
         plugin.registerDynamicCommands();
         chat.info("Plugin reloaded.");
-        p.sendMessage(chat.prefix("Plugin reloaded"));
+        p.sendMessage(chat.prefix("Plugin reloaded."));
 
         return true;
     }
